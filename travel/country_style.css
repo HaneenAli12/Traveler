@@ -1,0 +1,409 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--SecondFont);
+}
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+        background-color: var(--MainColor);
+        color: var(--SecondFontColor);
+    }
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --dark-color: #222;
+    --MainColor: #051f20;
+    --SecondColor: #0b2b26;
+    --ThirdColor: #163832;
+    --Fourtholor: #235347;
+    --FifthColor: #8eb69b;
+    --SixthColor: #daf1de;
+    --FontColor: #5a636a;
+    --SecondFontColor: #afb3b7;
+    --FirstFont: 'Poppins', sans-serif;
+    --SecondFont: 'Montserrat', sans-serif;
+
+}
+/*=============== Header ===============*/
+.header {
+    width: 100%;
+    padding: 10px 50px;
+    padding-right: 50px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: .4s ease;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -ms-transition: .4s ease;
+    -o-transition: .4s ease;
+}
+.blur-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 100%;
+    background-color: #00000018;
+    backdrop-filter: blur(20px);
+    z-index: -1;
+
+}
+.website-logo {
+    font-family: 'Satisfy', cursive;
+    font-weight: 600;
+    color: var(--SecondFontColor);
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.list-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.list-items .nav-item {
+    margin-left: 30px;
+}
+.list-items .nav-item .list-link {
+    text-decoration: none;
+    color: var(--SecondFontColor);
+    padding-bottom: 10px;
+}
+.list-items .nav-item .list-link:hover {
+    border-bottom: 2px solid var(--SecondFontColor);
+}
+#login,#signup {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.buttons-join{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    height: 40px;
+    background-color: var(--SecondFontColor);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    position: relative;
+    color: var(--SecondFontColor);
+}
+.account{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    position: relative;
+    
+}
+.account-icon {
+    font-size: 30px;
+    color: var(--FifthColor);
+}
+.account h3, .log-out-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-out{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--MainColor);
+    color: var(--SecondFontColor);
+    border: 1px solid var(--SecondColor);
+    outline: none;
+    box-shadow:  0 30px 20px rgba(0,0,0,0.4);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.log-out:active{
+background-color: var(--SecondColor);
+transform: scale(0.96);
+}
+/*=============== Swiper ===============*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*=============== Slides ===============*/
+.img-shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000006e, #000000d8);
+}
+.home-data{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    z-index: 100;
+}
+.country-title {
+    font-family: var(--FirstFont);
+    letter-spacing: 5px;
+    font-size: 10rem;
+    color: var(--SixthColor);
+    text-shadow: 0 30px 20px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    animation: transationtitle 2s;
+}
+.country-subtitle {
+    color: var(--SecondFontColor);
+    text-shadow: 0 30px 20px rgba(0,0,0,0.7);
+    font-size: 1.2rem;
+    font-family: var(--SecondFont);
+    animation: transitionsub 2.5s ease-in-out;
+}
+.countary-details{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 25px;
+    display: flex;
+    flex-flow:column wrap;
+}
+.animate-details {
+    animation: transitionsub 1.5s forwards , trans 1s 1.5s forwards;
+}
+.place-title {
+    position: absolute;
+    text-shadow: 0 30px 20px rgba(0,0,0,0.7);
+    padding: 2rem;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: var(--FirstFont);
+    color: var(--SixthColor);
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+.about-place {
+    padding-top: 2rem;
+    color: var(--SecondFontColor);
+    font-family: var(--FirstFont);
+    position: absolute;
+    padding: 2rem;
+    top: 15%;
+    width: 100%;
+    height: 60%;
+    text-align: left;
+    opacity: 0;
+}
+.link-more{
+    font-weight: bold;
+    color: var(--SecondFontColor);
+}
+
+.animate-place-about {
+    animation: transitionsub  1s 2s forwards;
+}
+.animate-img {
+    animation:  transitionsub  1s 2s forwards,photo 1s 2s forwards;
+}
+.img-card {
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.img-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    box-shadow:  0 30px 20px rgba(0,0,0,0.7);
+}
+.card-shadow{
+    position: absolute;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.trip-details {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.5);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+}
+.trip-animate {
+    animation: up 2s 2.5s forwards;
+}
+@keyframes up {
+    form {
+        height: 0;
+    }
+    to{
+        height: 40%;
+    }
+}
+.price {
+    text-align: left;
+    padding: 1rem 0 0 1rem;
+    color: var(--SixthColor);
+}
+.trip-rate {
+    color: rgb(255, 187, 0);
+    text-align: left;
+    padding: 1rem 0 1rem 1rem;
+    
+}
+.rate {
+    display: inline-block;
+    color: var(--SixthColor);
+    text-transform: capitalize;
+}
+.star {
+    color: grey;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    }
+    
+    .star.active {
+    color: gold;
+    }
+.book {
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--MainColor);
+    color: var(--SecondFontColor);
+    border: 1px solid var(--SecondColor);
+    outline: none;
+    box-shadow:  0 30px 20px rgba(0,0,0,0.4);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.book:active{
+    background-color: var(--SecondColor);
+    transform: scale(0.96);
+}
+.trip-details-animation
+{
+    animation: transitionsub 2s 2.6s forwards;
+} 
+.trip-container {
+    opacity: 0;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    color: var(--FifthColor)!important;
+}
+@keyframes transationtitle{
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes transitionsub {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes trans{
+    0% {
+        top: 38%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    100%{
+        top: 15%;
+        left: 29%;
+    }
+}
+@keyframes photo{
+    from {
+        top: 25%;
+    right: -10%;
+    }
+    to {
+        top: 25%;
+        right: 10%;
+    }
+}
